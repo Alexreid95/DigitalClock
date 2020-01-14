@@ -9,6 +9,12 @@ function displayTime() {
   let min = d.getMinutes();
   let sec = d.getSeconds();
 
+  //Ensures values are 2 digits
+  (hour < 10) ? hour = "0" + hour: hour;
+  (min < 10) ? min = "0" + min: min;
+  (sec < 10) ? sec = "0" + sec: sec;
+
+  //Sets display
   let time = hour + ":" + min + ":" + sec;
   timeDisplay.innerText = time;
 
