@@ -1,0 +1,47 @@
+* {
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: monospace, sans-serif;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+.clock-wrap {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.clock-wrap .display {
+  color: transparent;
+  background-image: linear-gradient(135deg, #35DDFF, #8E43E8, #FF6886, #46E895, #FFD842);
+  animation: colour 20s linear infinite;
+  background-size: 1000%;
+  -webkit-background-clip: text;
+}
+
+@keyframes colour {
+  0% {
+    background-position: 0 100%;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.clock-wrap .time-display {
+  font-size: 100px;
+}
